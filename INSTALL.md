@@ -86,21 +86,48 @@ connected.
 
 ---
 
-## Then just ask for what you want
+## What you can now do
 
-- *"Bring our Odoo jobs into BNJ."*
-- *"Bring our Odoo applications into BNJ."* — do the jobs first; applications
-  need their job to exist in BNJ.
-- *"Show me what that would create before you do it."*
-- *"Put this job in our Odoo."*
+Five things, all in plain conversation. You never have to name a tool.
 
-Every run ends with a plain report of what was created, what was already there,
-and what was skipped and why.
+| Ask for | What happens |
+|---|---|
+| *"Is our Odoo connected, and what is waiting to sync?"* | Reports the connection, when it last ran, and how many jobs and applications are not yet on the other side. Changes nothing. |
+| *"Bring our Odoo jobs into BNJ."* | Creates the job positions BNJ does not have, **as drafts**, with their recruitment stages as the BNJ pipeline. |
+| *"Bring our Odoo applications into BNJ."* | Creates the applications and the candidates behind them. Do the jobs first — an application needs its job to exist in BNJ. |
+| *"Put this job in our Odoo."* | Creates one BNJ job in Odoo, if it is not there already. |
+| *"Send this application to Odoo."* | Creates one BNJ application in Odoo, if it is not there already. |
 
-**One thing worth knowing before you start:** the sync only ever creates what is
-missing. It never changes a record that already exists on the other side, so an
-edit made after a record has synced does not travel. Your BNJ contact can walk
-you through what that means for your setup.
+Add *"show me what that would create first"* to any of them for a preview that
+writes nothing. Every real run ends with a plain report: what was created, what
+was already there, and what was skipped and why. Nothing is skipped silently.
+
+Large histories arrive in batches — Claude will tell you when more remain and
+offer to carry on.
+
+### What comes across
+
+Jobs bring their title, description, department, employment type, location,
+deadline and stages. Applications bring the stage, when the person applied, their
+salary expectation, and — for anyone refused or archived in Odoo — the rejection
+with **your own reason and date**, not the date of the import. Candidates bring
+name, email, phone, LinkedIn and city, matched on email so one person applying to
+four roles stays one person. Custom fields come across as labelled notes, both
+the Studio kind and Properties.
+
+### What it never does
+
+Never publishes a job. Never emails anyone. Never runs AI scoring on an imported
+application. Never gives an imported candidate a login. Never deletes anything on
+either side. Never runs on a schedule — only when you ask.
+
+### The one thing to know before you start
+
+**The sync only ever creates what is missing. It never changes a record that
+already exists on the other side.** An edit made after a record has synced does
+not travel — in either direction. That is what stops two systems overwriting each
+other's work, and it means you decide which platform owns a given record. Your
+BNJ contact can walk you through what that means for your setup.
 
 ---
 
