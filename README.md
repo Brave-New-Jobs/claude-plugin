@@ -9,11 +9,17 @@ Max, Team or Enterprise** plan.
 
 ---
 
-## If you use Claude Desktop or claude.ai
+## If you use Claude Desktop, claude.ai or Cowork
 
-**Read [INSTALL.md](INSTALL.md).** It is written for a non-technical reader and
-takes about two minutes: add a connector, upload a skill. You do not need this
-repository or anything else on this page.
+Download **[`bnj-employer-plugin.zip`](../../releases/latest)** from the latest
+release, then in Claude open **Customize → Plugins** and choose the option to
+upload a custom plugin file. That is the connector and the skill in one go.
+
+*In Cowork, open the **Cowork** tab first, then Customize.*
+
+If you do not see a Plugins section — it is not on every plan and app version yet
+— **[INSTALL.md](INSTALL.md)** has the two-step route that works everywhere: add
+a connector, upload a skill. Same result, two minutes.
 
 ## If you use Claude Code
 
@@ -36,7 +42,8 @@ sync?"*. You will be asked to sign in to BraveNewJobs the first time.
 | `.mcp.json` | The BraveNewJobs employer connector — a remote, OAuth-protected MCP server. Nothing runs on your machine. |
 | `skills/bnj-odoo-sync/` | A skill that teaches Claude how the Odoo integration actually behaves, so you get straight answers rather than guesses. |
 | `INSTALL.md` | The two-step setup for Claude Desktop and claude.ai. |
-| `build-skill-zip.py` | Packages the skill as a zip for upload to Claude Desktop. |
+| `build-plugin-zip.py` | Builds `bnj-employer-plugin.zip` — the one-file install. |
+| `build-skill-zip.py` | Builds the skill-only zip, for the two-step route. |
 
 ## What the Odoo sync does
 
@@ -57,31 +64,29 @@ An import never publishes a job, never emails a candidate, never runs AI scoring
 on imported applications, never creates a login for an imported candidate, and
 never deletes anything on either side.
 
-## Why there is no one-click installer
+## A note on `.mcpb` files
 
-`.mcpb` (MCP Bundle) is the single-file, one-click install format for Claude
-Desktop, and it cannot carry this. Its manifest allows four server types —
-`node`, `python`, `binary`, `uv` — all of them local processes launched with a
-command, and it has no field for a skill. The BraveNewJobs connector is a
-**remote** OAuth server, so there is nothing to bundle and run locally.
+If you have seen `.mcpb` bundles for other tools and wondered why this is not
+one: that format ships a **local** MCP server — Node or Python that runs on your
+own machine — and its manifest has no way to describe a remote server or to carry
+a skill. The BraveNewJobs connector is remote and OAuth-protected, so there is
+nothing to install locally. The plugin zip above is the single-file route here.
 
-Remote servers are added as **custom connectors**, which is already a single URL
-paste, and skills are uploaded separately. That is what `INSTALL.md` walks
-through.
+Do not put this server in `claude_desktop_config.json` either. That file is the
+manual route for local servers; pointed at a remote OAuth server it does not
+work, and it fails in a way that looks like a broken install.
 
-Do not put this server in `claude_desktop_config.json`. That file is the manual
-route for local servers; pointed at a remote OAuth server it does not work, and
-it fails in a way that looks like a broken install.
-
-## Building the skill zip yourself
+## Building the zips yourself
 
 ```bash
-python build-skill-zip.py            # -> ./dist/bnj-odoo-sync-skill.zip
-python build-skill-zip.py ~/Desktop  # -> somewhere else
+python build-plugin-zip.py   # -> ./dist/bnj-employer-plugin.zip
+python build-skill-zip.py    # -> ./dist/bnj-odoo-sync-skill.zip
 ```
 
-The zip contains the skill **folder** (`bnj-odoo-sync/SKILL.md`), which is what
-Claude expects — not a bare `SKILL.md`.
+They are shaped differently on purpose: the plugin zip has
+`.claude-plugin/plugin.json` at its root, and the skill zip contains the skill
+**folder** (`bnj-odoo-sync/SKILL.md`) rather than a bare `SKILL.md`. Each is what
+its uploader expects.
 
 ---
 

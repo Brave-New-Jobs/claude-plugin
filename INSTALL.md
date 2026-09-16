@@ -1,7 +1,33 @@
 # Setting up BraveNewJobs in Claude
 
-Two steps, about two minutes, no files to edit. You need a Claude **Pro, Max,
-Team or Enterprise** plan.
+You need a Claude **Pro, Max, Team or Enterprise** plan.
+
+There are two ways in. Try the first — it is one file and one upload. If your
+Claude does not show a **Plugins** section, use the second.
+
+---
+
+# The quick way — one file
+
+1. Download **`bnj-employer-plugin.zip`**. Keep it zipped.
+2. In Claude, open **Customize** in the left sidebar.
+   *In Cowork, open the **Cowork** tab first, then Customize.*
+3. Go to the **Plugins** tab.
+4. Choose the option to **upload a custom plugin file** and pick the zip.
+5. When it asks you to sign in to BraveNewJobs, do it, and approve the access.
+
+That is both halves at once — the BraveNewJobs connection and the Odoo know-how.
+Skip to **Check it worked**.
+
+> If the upload is refused or you cannot find a Plugins tab, nothing is wrong
+> with the file — that section is not available on every plan and app version
+> yet. Use the two-step way below, which works everywhere.
+
+---
+
+# The two-step way — works everywhere
+
+Two steps, about two minutes, no files to edit.
 
 ---
 
@@ -87,5 +113,7 @@ you through what that means for your setup.
 | Claude can see jobs but cannot import applications | The connector needs the applications permission. Disconnect and reconnect it in Step 1 to grant it. |
 | No **Add custom connector** button | Your plan does not include custom connectors — Pro, Max, Team or Enterprise is required. |
 | No **Skills** section | Turn on **Code execution** under Settings → Capabilities first. |
+| No **Plugins** tab, or the zip upload is refused | Not every plan and app version has plugin upload yet. Use the two-step way — same result. |
+| Your company restricts what can be installed | On Team and Enterprise an administrator can limit plugins and connectors. Ask them to allow BraveNewJobs. |
 
 Anything else: **support@bravenewjobs.com**.
