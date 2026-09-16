@@ -1,0 +1,14 @@
+{
+  "name": "bnj-employer",
+  "displayName": "BraveNewJobs Employer",
+  "version": "1.0.0",
+  "description": "The BraveNewJobs employer connector plus the skill that drives the Odoo integration — import job positions and applications from Odoo, push them back, and explain exactly what the sync does and does not do.",
+  "author": {
+    "name": "BraveNewJobs",
+    "url": "https://bravenewjobs.com"
+  },
+  "homepage": "https://bravenewjobs.com",
+  "license": "UNLICENSED",
+  "keywords": ["recruiting", "ats", "odoo", "hiring", "bravenewjobs"],
+  "mcpServers": "./.mcp.json"
+}

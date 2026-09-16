@@ -1,0 +1,21 @@
+{
+  "name": "bravenewjobs",
+  "description": "BraveNewJobs plugins for Claude Code",
+  "owner": {
+    "name": "BraveNewJobs",
+    "email": "support@bravenewjobs.com"
+  },
+  "plugins": [
+    {
+      "name": "bnj-employer",
+      "displayName": "BraveNewJobs Employer",
+      "description": "The BraveNewJobs employer connector plus the Odoo sync skill.",
+      "author": { "name": "BraveNewJobs", "url": "https://bravenewjobs.com" },
+      "category": "productivity",
+      "source": "./",
+      "homepage": "https://bravenewjobs.com",
+      "version": "1.0.0",
+      "keywords": ["recruiting", "ats", "odoo", "hiring"]
+    }
+  ]
+}
