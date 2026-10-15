@@ -1,0 +1,14 @@
+{
+  "name": "bnj-employer",
+  "displayName": "Brave New Jobs for Employers",
+  "version": "1.1.0",
+  "description": "Run your Brave New Jobs hiring in conversation: the BNJ employer connector plus the skill for drafting and publishing jobs, reviewing applications, keeping the company profile current and syncing with Odoo.",
+  "author": {
+    "name": "Brave New Jobs",
+    "url": "https://www.bravenewjobs.com"
+  },
+  "homepage": "https://www.bravenewjobs.com",
+  "keywords": ["hiring", "recruiting", "ats", "jobs", "employer", "mcp"],
+  "repository": "https://github.com/Brave-New-Jobs/claude-plugin",
+  "license": "Apache-2.0"
+}

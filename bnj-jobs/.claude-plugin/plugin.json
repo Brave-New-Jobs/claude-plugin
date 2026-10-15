@@ -1,0 +1,14 @@
+{
+  "name": "bnj-jobs",
+  "displayName": "Brave New Jobs",
+  "version": "1.0.0",
+  "description": "Find and apply to Brave New Jobs roles in conversation: the BNJ candidate connector plus the skill that walks through a complete, confirmed application.",
+  "author": {
+    "name": "Brave New Jobs",
+    "url": "https://www.bravenewjobs.com"
+  },
+  "homepage": "https://www.bravenewjobs.com",
+  "keywords": ["jobs", "job-search", "apply", "careers", "mcp"],
+  "repository": "https://github.com/Brave-New-Jobs/claude-plugin",
+  "license": "Apache-2.0"
+}

@@ -1,21 +1,54 @@
 {
   "name": "bravenewjobs",
-  "description": "BraveNewJobs plugins for Claude Code",
+  "description": "Brave New Jobs plugins for Claude: apply to jobs as a candidate, or run your hiring as an employer.",
   "owner": {
-    "name": "BraveNewJobs",
-    "email": "support@bravenewjobs.com"
+    "name": "Brave New Jobs",
+    "email": "hello-bnj@bravenewjobs.com",
+    "url": "https://www.bravenewjobs.com"
   },
   "plugins": [
     {
-      "name": "bnj-employer",
-      "displayName": "BraveNewJobs Employer",
-      "description": "The BraveNewJobs employer connector plus the Odoo sync skill.",
-      "author": { "name": "BraveNewJobs", "url": "https://bravenewjobs.com" },
-      "category": "productivity",
-      "source": "./",
-      "homepage": "https://bravenewjobs.com",
+      "name": "bnj-jobs",
+      "source": "./bnj-jobs",
+      "displayName": "Brave New Jobs",
+      "description": "Find and apply to Brave New Jobs roles in conversation: the BNJ candidate connector plus the skill that walks through a complete, confirmed application.",
       "version": "1.0.0",
-      "keywords": ["recruiting", "ats", "odoo", "hiring"]
+      "author": {
+        "name": "Brave New Jobs",
+        "url": "https://www.bravenewjobs.com"
+      },
+      "homepage": "https://www.bravenewjobs.com",
+      "license": "Apache-2.0",
+      "keywords": [
+        "jobs",
+        "job-search",
+        "apply",
+        "careers",
+        "mcp"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "bnj-employer",
+      "source": "./bnj-employer",
+      "displayName": "Brave New Jobs for Employers",
+      "description": "Run your Brave New Jobs hiring in conversation: the BNJ employer connector plus the skill for drafting and publishing jobs, reviewing applications, keeping the company profile current and syncing with Odoo.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Brave New Jobs",
+        "url": "https://www.bravenewjobs.com"
+      },
+      "homepage": "https://www.bravenewjobs.com",
+      "license": "Apache-2.0",
+      "keywords": [
+        "hiring",
+        "recruiting",
+        "ats",
+        "jobs",
+        "employer",
+        "mcp"
+      ],
+      "category": "productivity"
     }
   ]
 }

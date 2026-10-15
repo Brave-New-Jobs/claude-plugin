@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "bnj-jobs": {
+      "type": "http",
+      "url": "https://mcp.bravenewjobs.com/mcp"
+    }
+  }
+}
